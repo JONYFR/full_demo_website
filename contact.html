@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+        
+        input[type=submit] {
+            background-color: #04aa6d;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 20px;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+        
+        .col-75 {
+            float: right;
+            width: 75%;
+            margin-top: 6px;
+        }
+        
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HI! I'M JO NY</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex assumenda, perferendis iure consectetur magnam, repudiandae vero sapiente, a eveniet sequi explicabo debitis harum illum enim.</p>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75"> <input type="text" name="fname" placeholder="First name"></div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Last Name</label>
+                </div>
+                <div class="col-75"> <input type="text" name="lname" placeholder="Last name"></div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country" name="country">Country</label>
+                </div>
+                <div class="col-75">
+                    <select name="country" id="">
+                      <option value="bangladesh">Bangladesh</option>
+                      <option value="india">India</option>
+                      <option value="pakistan">Pakistan</option>
+                      <option value="srilanka">Srilanka</option>
+                      <option value="srilanka">UK</option>
+                      <option value="srilanka">USA</option>
+                      <option value="srilanka">UAE</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                    <textarea name="subject" id="" placeholder="write somthing..." style="height: 200px;"></textarea>
+                </div>
+            </div>
+            <input type="submit" name="submit" value="click me">
+        </form>
+    </div>
+</body>
+
+</html>

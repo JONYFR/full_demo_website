@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Portfolio</title>
+    <style>
+       body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        /* header style */
+        
+        .fote .navbar-brand {
+            font-weight: 500;
+            font-size: 25px;
+        }
+        
+        .fote span {
+            display: inline-block;
+            background: #6278DF;
+            color: #fff;
+            height: 44px;
+            width: 45px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 10px;
+            position: relative;
+            top: 2px;
+        }
+        
+        .fote-menu .nav-link {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+        /* slider-section */
+        
+        .slider-section {
+            background: url(img/mbr-10.jpg) no-repeat center center;
+            padding: 200px 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .slider-section::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+        
+        .slider-caption h4 {
+            margin-bottom: 40px;
+        }
+        
+        .slider-caption h2 {
+            margin-bottom: 50px;
+            font-size: 40px;
+        }
+        
+        .slider-caption .btn {
+            background: #5BA533;
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 30px;
+        }
+        
+        .slider-caption .form-cotrol {
+            padding: 18px 20px;
+        }
+        
+        .number-counter .h2 {
+            font-size: 50px;
+            font-weight: 500;
+            color: #000;
+        }
+        
+        .number-counter .jene {
+            font-size: 20px;
+        }
+        /* about section */
+        
+        .about-section {
+            background: #F7F9FF;
+        }
+        
+        .amar-nam-jony {
+            margin-top: 160px;
+        }
+        
+        .amar-nam-jony .lead {
+            font-size: 20px;
+            line-height: 2.2rem;
+        }
+        /* fiture-section */
+        
+        .fiture-item {
+            height: 300px;
+            box-shadow: 2.5px 4.33px 30px 0 rgba(64, 87, 191, 0.2);
+        }
+        
+        .left-img-sec {
+            width: 40%;
+            overflow: hidden;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .left-text-sec {
+            width: 60%;
+            padding: 25px;
+        }
+        
+        .left-img-sec img {
+            height: 100%;
+            width: auto !important;
+            max-width: inherit;
+            position: relative;
+            left: -80px;
+        }
+        
+        .feture-section .wood {
+            font-size: 45px;
+            font-weight: 400;
+        }
+        
+        .feture-section .natasha {
+            font-weight: 300;
+        }
+        /* portfolio hover section */
+        
+        .portfolio-items a {
+            position: relative;
+            display: block;
+        }
+        
+        .portfolio-items a::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(98, 120, 223, 0.6);
+            opacity: 0;
+            visibility: hidden;
+            transition: .4s;
+        }
+        
+        .portfolio-items:hover a::after {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .min-section-bg {
+            background-color: #e9e2f1;
+        }
+        /* prising-iteams */
+        
+        .prising-iteam {
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 2.5px 4.33px 30px 0 rgba(64, 87, 191, 0.4);
+            border-radius: 5px;
+        }
+        
+        .prising-iteam ul {
+            margin-left: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .prising-iteam ul li {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #777;
+        }
+        
+        .prising-iteam ul li span {
+            font-size: 25px;
+            color: #17A2B8;
+            font-weight: bold;
+            display: inline-block;
+            width: 30px;
+        }
+        
+        .prising-iteams-button a {
+            box-shadow: 2.5px 4.33px 30px 0 rgba(64, 87, 191, 0.5);
+            border-color: #17A2B8;
+            border-width: 3px;
+            font-size: 22px;
+            padding: 15px 30px;
+            color: #17A2B8;
+        }
+        /* testimonial-section */
+        
+        .author-identity img {
+            width: 85px;
+            margin-right: 18px;
+        }
+        
+        .author-identity {
+            width: 220px;
+            margin: auto;
+        }
+        
+        .author-quality {
+            text-align: left;
+            position: relative;
+            top: 10px;
+        }
+        
+        span {
+            font-size: 140px;
+            color: #f0f0f0;
+        }
+        
+        .testimonial-notice h1 {
+            margin-bottom: -45px;
+        }
+        
+        .testimonial-notice p {
+            margin-top: -37px;
+        }
+        
+        .leader-seminer .card img {
+            height: auto;
+            width: 130px;
+            margin-top: -70px;
+            margin-left: 15px;
+        }
+        
+        .leader-seminer {
+            margin-top: 90px;
+        }
+        /* content-section */
+        
+        .form-control-div .card {
+            box-shadow: 2.5px 4.33px 30px 0 rgba(64, 87, 191, 0.2);
+            padding: 40px;
+        }
+        /* footer section */
+        
+        .bapka-beta .rasel {
+            padding: 20px;
+        }
+        /* .app-section-py-5 .app-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    } */
+        /* .app-section .container .apppp {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    } */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fote">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <span><i class="fas fa-mobile-alt"></i> </span> AppAMP Theme</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse ml-5 justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav fote-menu ml-5 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <a class="btn btn-outline-primary font-weight-bold btn-lg" href="#">Buy Now</a>
+            </div>
+        </div>
+    </nav>
+    <section class="slider-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="slider-caption w-50 mx-auto text-center text-white">
+                        <h4>It is created to watch your health</h4>
+                        <h2>Health Tracker App</h2>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-cotrol form-control-lg" placeholder="input your choice">
+                                </div>
+                                <div class="col-lg-5">
+                                    <button type="submit" class="btn btn-info btn-lg btn-block"> Get App</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="number-counter ">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="h2"> 100+</p>
+                    <p class="text-muted jene">Health programs</p>
+                </div>
+                <div class="col-lg-3">
+                    <p class="h2"> 50+</p>
+                    <p class="text-muted jene">Individual parameters</p>
+                </div>
+                <div class="col-lg-3">
+                    <p class="h2"> 2500+</p>
+                    <p class="text-muted jene">Active users</p>
+                </div>
+                <div class="col-lg-3">
+                    <p class="h2"> 10 X</p>
+                    <p class="text-muted jene">Training efficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="amar-nam-jony">
+                        <h1 class="mb-4"> Activity Goals To Improve Health</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora accusamus doloribus magni unde autem ab odit quam! Odit porro obcaecati, quibusdam impedit quam temporibus molestiae quia enim doloremque assumenda doloribus ducimus
+                            consectetur omnis reiciendis ad quod excepturi! Reiciendis, facilis veniam? Voluptatibus quae nemo dignissimos obcaecati facilis ipsam fugiat dolorem hic?</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img class="rounded" src="img/015.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feture-section py-5 mb-4">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center mb-4 wood">
+                    Learn more about our application
+                </h1>
+                <h4 class="text-muted text-center mb-5 natasha">Coaching you to a healthier and more active life</h4>
+                <div class="col-lg-4 mb-4">
+                    <div class="fiture-item d-flex align-items-center">
+                        <div class="left-img-sec h-100">
+                            <img src="img/022.jpg" alt="">
+                        </div>
+                        <div class="left-text-sec h-auto">
+                            <h4>HEART POINTS</h4>
+                            <p class="text-muted">Activities that get your heart pumping harder have tremendous health benefits for your heart and mind.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="fiture-item d-flex align-items-center">
+                        <div class="left-img-sec h-100">
+                            <img src="img/mbr-7.png" alt="">
+                        </div>
+                        <div class="left-text-sec h-auto">
+                            <h4>MOVE MINUTES</h4>
+                            <p class="text-muted">When it comes to your health, its important to move more and sit less. Earn Move Minutes for all your activity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="fiture-item d-flex align-items-center">
+                        <div class="left-img-sec h-100 ">
+                            <img src="img/mbr-8.jpg" alt="">
+                        </div>
+                        <div class="left-text-sec h-auto">
+                            <h4>HEART POINTS</h4>
+                            <p class="text-muted">Activities that get your heart pumping harder have tremendous health benefits for your heart and mind.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="fiture-item d-flex align-items-center">
+                        <div class="left-img-sec h-100">
+                            <img src="img/mbr-5.jpg" alt="">
+                        </div>
+                        <div class="left-text-sec h-auto">
+                            <h4>HEART POINTS</h4>
+                            <p class="text-muted">Activities that get your heart pumping harder have tremendous health benefits for your heart and mind.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="fiture-item d-flex align-items-center">
+                        <div class="left-img-sec h-100">
+                            <img src="img/mbr-12.png" alt="">
+                        </div>
+                        <div class="left-text-sec h-auto">
+                            <h4>HEART POINTS</h4>
+                            <p class="text-muted">Activities that get your heart pumping harder have tremendous health benefits for your heart and mind.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="fiture-item d-flex align-items-center">
+                        <div class="left-img-sec h-100">
+                            <img src="img/mbr-13.jpg" alt="">
+                        </div>
+                        <div class="left-text-sec h-auto">
+                            <h4>HEART POINTS</h4>
+                            <p class="text-muted">Activities that get your heart pumping harder have tremendous health benefits for your heart and mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio-section bg-light">
+        <div class="container ">
+            <div class="row text-center py-5">
+                <div class="col">
+                    <h2>Look at our application</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="portfolio-items">
+                        <a href="#">
+                            <img src="img/022.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="portfolio-items">
+                        <a href="#">
+                            <img src="img/033.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="portfolio-items">
+                        <a href="#">
+                            <img src="img/04.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="portfolio-items">
+                        <a href="#">
+                            <img src="img/05.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="portfolio-items">
+                        <a href="#">
+                            <img src="img/background18.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="portfolio-items">
+                        <a href="#">
+                            <img src="img/022.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="prising-table-section min-section-bg py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h1>Start using our app today</h1>
+                    <p class="lead">Being active is important to our health, but how much or what kind of activity do you need?</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="prising-iteam">
+                        <h1 class="mb-5">Starter Plan</h1>
+                        <h5 class="text-muted mb-5">For simple users</h5>
+                        <ul>
+                            <li> <span><i class="fas fa-check"></i></span> HEART POINTS</li>
+                            <li> <span><i class="fas fa-check"></i></span> HEART POINTS</li>
+                            <li> <span><i class="fas fa-check"></i></span> HEART POINTS</li>
+                            <li> <span> <i class="fas fa-times"></i></span> HEART POINTS</li>
+                            <li> <span> <i class="fas fa-times"></i></span> HEART POINTS</li>
+                        </ul>
+                        <div class="prising-iteams-button text-center">
+                            <a class="btn btn-outline-info btn-lg" href="#">Get Acces Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="prising-iteam">
+                        <h1 class="mb-5">Starter Plan</h1>
+                        <h5 class="text-muted mb-5">For simple users</h5>
+                        <ul>
+                            <li> <span><i class="fas fa-check"></i></span> HEART POINTS</li>
+                            <li> <span><i class="fas fa-check"></i></span> HEART POINTS</li>
+                            <li> <span><i class="fas fa-check"></i></span> HEART POINTS</li>
+                            <li> <span> <i class="fas fa-times"></i></span> HEART POINTS</li>
+                            <li> <span> <i class="fas fa-times"></i></span> HEART POINTS</li>
+                        </ul>
+                        <div class="prising-iteams-button text-center">
+                            <a class="btn btn-outline-info btn-lg" href="#">Get Acces Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="row">
+                <div class="col py-5 text-center">
+                    <div class="testimonial-notice w-75 mx-auto">
+                        <h5 class="text-muted  mb-4">Feedback from our users</h5>
+                        <h1>What do users say about our application</h1>
+                        <span> <i class="fas fa-quote-left "></i></span>
+                        <p class="mb-5 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptatibus natus. Doloremque, reprehenderit corrupti modi rem qui nostrum amet tenetur.</p>
+                        <div class="author-identity mt-5">
+                            <img class="float-left rounded-circle" src="img/face1.jpg" alt="">
+                            <div class="author-quality">
+                                <h5>Jason Doe</h5>
+                                <h6 class="text-muted">User</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="leder-section bg-light py-5">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col mb-4">
+                    <h1>Our Team and History</h1>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis perspiciatis vero accusantium excepturi aperiam eius sit quis nobis cupiditate voluptatem tempora a odio, ad, officiis ex harum saepe fuga at modi quibusdam voluptas
+                        voluptatum! </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis perspiciatis vero accusantium excepturi aperiam eius sit quis nobis cupiditate voluptatem tempora a odio, ad, officiis ex harum saepe fuga at modi quibusdam voluptas
+                        voluptatum! </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="leader-seminer">
+                        <div class="card border-0 shadow">
+                            <img class="rounded-circle" src="img/face1.jpg" alt="">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Jason Doe</h4>
+                                </div>
+                                <div class="card-subtitle mb-3">
+                                    <h5>Prgrammer</h5>
+                                </div>
+                                <div class="card-text mb-3">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, reprehenderit?</p>
+                                </div>
+                                <div class="btn btn-light shadow mb-4">Now Press</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="leader-seminer">
+                        <div class="card border-0 shadow">
+                            <img class="rounded-circle" src="img/face2.jpg" alt="">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Jason Doe</h4>
+                                </div>
+                                <div class="card-subtitle mb-3">
+                                    <h5>Prgrammer</h5>
+                                </div>
+                                <div class="card-text mb-3">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, reprehenderit?</p>
+                                </div>
+                                <div class="btn btn-light shadow mb-4">Now Press</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="leader-seminer">
+                        <div class="card border-0 shadow">
+                            <img class="rounded-circle" src="img/face3.jpg" alt="">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Jason Doe</h4>
+                                </div>
+                                <div class="card-subtitle mb-3">
+                                    <h5>Prgrammer</h5>
+                                </div>
+                                <div class="card-text mb-3">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, reprehenderit?</p>
+                                </div>
+                                <div class="btn btn-light shadow mb-4">Now Press</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="leader-seminer">
+                        <div class="card border-0 shadow">
+                            <img class="rounded-circle" src="img/face4.jpg" alt="">
+                            <div class="card-body ">
+                                <div class="card-title">
+                                    <h4>Jason Doe</h4>
+                                </div>
+                                <div class="card-subtitle mb-3">
+                                    <h5>Prgrammer</h5>
+                                </div>
+                                <div class="card-text mb-3">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, reprehenderit?</p>
+                                </div>
+                                <div class="btn btn-light shadow mb-4">Now Press</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="content-form-div text-center">
+                    <p class="lead"> We need to know your opinion</p>
+                    <h1>Write to us and we will contact you</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="form-control-div">
+                        <div class="card text-center border-0 ">
+                            <div class="card-body">
+                                <h3>Send a massage</h3>
+                                <form action="#">
+                                    <input type="e-mail" class="form-control form-control-lg mb-3 shadow" placeholder="Write e-mail">
+                                    <div class="row mb-3 ">
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control form-control-lg shadow" placeholder="Name">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control form-control-lg shadow" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <textarea name="" class="form-control mb-3 shadow" placeholder="massage"></textarea>
+                                    <button class="btn btn-outline-info btn-lg shadow">Click me</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </section>
+    <section class="app-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <p class="lead">It is created to watch your health</p>
+                    <h1>Get our app for Android and iPhone</h1>
+                </div>
+            </div>
+            <div class="row apppp">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3">
+                    <a href="https://www.apple.com/"><button class="btn btn-outline-info btn-lg float-left"><i class="fa-brands fa-apple"></i> App store</button></a>
+                </div>
+                <div class="col-lg-3">
+                    <a href=""><button class="btn btn-outline-info btn-lg"><i class="fa-brands fa-google-play"></i>Play store</button></a>
+                </div>
+
+                <div class="col-lg-3"></div>
+
+            </div>
+        </div>
+    </section>
+    <footer class=" min-section-bg py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p class=" mb-0 lead"> &copy; All Right rejerved by JO NY</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+
+</html>
